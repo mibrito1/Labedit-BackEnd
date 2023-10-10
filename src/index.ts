@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import { number } from "zod"
 import { postRouter } from "./router/postRouter"
 import { userRouter } from "./router/userRouter"
+import { commentRouter } from "./router/commentRouter"
 dotenv.config()
 const api = express()
 api.use(express.json())
@@ -13,6 +14,7 @@ api.listen(Number(process.env.PORT), () => {
 })
 api.use("/post", postRouter)
 api.use("/user", userRouter)
+api.use("/comment", commentRouter)
 
 
 
