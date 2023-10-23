@@ -6,7 +6,7 @@ import { UserDataBase } from "../dataBase/userDatabase";
 import { TokenManager } from "../services/TokenManager";
 import { UserController } from "../controller/userController";
 import { UserBusiness } from "../business/userBusness";
-import { HashManager } from "../services/HashManager";
+import { HashManager } from "../services/hashManager";
 export const userRouter = express.Router()
 const userController = new UserController(
     new UserBusiness(

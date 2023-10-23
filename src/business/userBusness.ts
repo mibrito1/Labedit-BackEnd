@@ -5,9 +5,10 @@ import { Users, userRole } from "../models/Users";
 import { TokenManager, TokenPayload } from "../services/TokenManager";
 import { LoginInputDTO, LoginOutputDTO } from "../dtos/users/login.dto";
 import { UserDataBase } from "../dataBase/userDatabase";
-import { HashManager } from "../services/HashManager";
+
 import { BadError } from "../errors/BadError";
 import { NotfoundError } from "../errors/NotFoundError";
+import { HashManager } from "../services/hashManager";
 
 export class UserBusiness {  // aqui vai tratar as regras do negocio, as regras do projeto
     constructor(private idGenerator: IdGenerator,
